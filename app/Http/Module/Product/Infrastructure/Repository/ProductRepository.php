@@ -4,6 +4,7 @@ namespace App\Http\Module\Product\Infrastructure\Repository;
 
 use App\Http\Module\Product\Domain\Model\Product;
 use App\Http\Module\Product\Domain\Services\Repository\ProductRepositoryInterface;
+use Illuminate\Support\Facades\DB;
 
 class ProductRepository implements ProductRepositoryInterface
 {
@@ -14,7 +15,7 @@ class ProductRepository implements ProductRepositoryInterface
                 'nama' => $product->nama,
                 'price' => $product->price,
                 'description' => $product->description,
-            ]
+            ],'nama'
         );
     }
 }

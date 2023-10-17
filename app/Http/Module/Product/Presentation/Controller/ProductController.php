@@ -4,6 +4,7 @@ namespace App\Http\Module\Product\Presentation\Controller;
 
 use App\Http\Module\Product\Application\Services\CreateProduct\CreateProductRequest;
 use App\Http\Module\Product\Application\Services\CreateProduct\CreateProductService;
+use Illuminate\Http\Request;
 
 class ProductController
 {
@@ -14,6 +15,7 @@ class ProductController
     }
 
     public function createProduct(Request $request){
+        // dd($request);
         $request = new CreateProductRequest(
             $request->input('nama'),
             $request->input('price'),

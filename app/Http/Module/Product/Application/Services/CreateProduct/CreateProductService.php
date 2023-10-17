@@ -3,13 +3,13 @@
 namespace App\Http\Module\Product\Application\Services\CreateProduct;
 
 use App\Http\Module\Product\Domain\Model\Product;
-use App\Http\Module\Product\Domain\Services\Repository\ProductRepositoryInterface;
+use App\Http\Module\Product\Infrastructure\Repository\ProductRepository;
 
 class CreateProductService
 {
 
     public function __construct(
-        private ProductRepositoryInterface $product_repository
+        private ProductRepository $product_repository
     )
     {
     }
